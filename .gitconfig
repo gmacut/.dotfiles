@@ -1,0 +1,41 @@
+# Reference this file from ~/.gitconfig by using:
+# [include]
+#     path = /path/to/file
+
+[core]
+        autocrlf = input
+        editor = vim
+        safecrlf = true
+        pager = less -F
+
+[color]
+        ui = auto
+        diff = auto
+
+[merge]
+        tool = kdiff3
+
+[alias]
+        co = checkout
+        ci = commit
+        st = status
+        br = branch
+        hist = log --pretty=format:'%h %cd | %s%d [%an]' --graph --date=short
+        head = log -n 5 --pretty=format:'%h %cd | %s%d [%an]' --graph --date=short
+        dype = cat-file -t
+        dump = cat-file -p
+        pl = pull --ff-only
+        meld = difftool --dir-diff
+        files = diff-tree --no-commit-id --name-status -r HEAD
+
+[diff]
+        tool = meld
+
+[pull]
+        ff = only
+
+[gui]
+        spellingdictionary = none
+
+[grep]
+        linenumber = true
